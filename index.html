@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Shika Mahdavi | Career Deck | Capital One</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- BRAND SETTINGS - Edit these for each application -->
+<script>
+const BRAND = {
+  name: "Dr. Shika Mahdavi",
+  headline: "Senior Learning & Knowledge Measurement Leader",
+  shortBio: "15+ years transforming enterprise learning ecosystems, measurement strategies, and knowledge platforms in regulated financial services.",
+  primaryColor: "#004977",     // Capital One navy
+  secondaryColor: "#0A6EBD",   // Capital One blue
+  accentColor: "#D03027",      // Capital One red
+  backgroundColor: "#FAFBFC",
+  contactEmail: "shika.mahdavi@gmail.com",
+  linkedin: "linkedin.com/in/shika-lanae-hershel-ed-d",
+  website: "https://shikamahdavi.com/",
+  targetCompany: "Capital One",
+  targetRole: "Senior Manager - Learning & Knowledge Measurement & Technology Project Manager",
+};
+</script>
+
+<!-- STYLES -->
+<style>
+  :root {
+    --primary: #004977;
+    --secondary: #0A6EBD;
+    --accent: #D03027;
+    --bg: #FAFBFC;
+    --text: #1A1A2E;
+    --text-light: #4A5568;
+    --card-bg: #FFFFFF;
+    --border: #E2E8F0;
+    --gradient-start: #004977;
+    --gradient-end: #0A6EBD;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow: hidden;
+  }
+
+  /* Slide Container */
+  .deck-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+    overflow-y: auto;
+    padding: 60px 40px;
+  }
+
+  .slide.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .slide-inner {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Typography */
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--primary);
+  }
+
+  h1 { font-size: 3.2rem; font-weight: 700; line-height: 1.15; }
+  h2 { font-size: 2.2rem; font-weight: 600; margin-bottom: 1.2rem; }
+  h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; }
+
+  p {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .section-label {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  /* Cover Slide */
+  .cover-slide {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    color: #fff;
+    text-align: center;
+  }
+
+  .cover-slide h1 {
+    color: #fff;
+    font-size: 3.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .cover-headline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .cover-tagline {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.75);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+
+  .cover-accent-line {
+    width: 80px;
+    height: 3px;
+    background: var(--accent);
+    margin: 0 auto 2rem;
+    border-radius: 2px;
+  }
+
+  .cover-target {
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 28px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* Cards */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 1.5rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,73,119,0.1);
+  }
+
+  .card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+  }
+
+  .card-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 1.5rem;
+  }
+
+  .stat-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 32px 28px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: transform 0.25s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .stat-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 8px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  .stat-accent {
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 12px auto 0;
+    border-radius: 2px;
+  }
+
+  /* Leadership Story */
+  .story-block {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 40px;
+    border-left: 4px solid var(--accent);
+    margin-top: 1.5rem;
+  }
+
+  .story-block p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+
+  .story-block p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Expertise Tags */
+  .expertise-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 1.5rem;
+  }
+
+  .expertise-tag {
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    transition: all 0.2s ease;
+  }
+
+  .expertise-tag:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
+  .expertise-tag.highlight {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
+  /* Achievement Cards */
+  .achievement-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 32px;
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    transition: transform 0.25s ease;
+  }
+
+  .achievement-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,73,119,0.08);
+  }
+
+  .achievement-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .achievement-label.challenge { color: var(--accent); }
+  .achievement-label.action { color: var(--secondary); }
+  .achievement-label.result { color: #16A34A; }
+
+  /* Fit Section */
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 1.5rem;
+  }
+
+  .fit-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 28px;
+    border: 1px solid var(--border);
+  }
+
+  .fit-card .fit-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 10px;
+  }
+
+  .fit-card p {
+    font-size: 0.95rem;
+  }
+
+  .fit-full {
+    grid-column: 1 / -1;
+  }
+
+  /* Tools Grid */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 1.5rem;
+  }
+
+  .tool-group {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--border);
+  }
+
+  .tool-group h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 12px;
+  }
+
+  .tool-group ul {
+    list-style: none;
+  }
+
+  .tool-group li {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    padding: 3px 0;
+  }
+
+  /* Philosophy */
+  .philosophy-block {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    border-radius: 12px;
+    padding: 48px;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+
+  .philosophy-block p {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.85;
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+  }
+
+  /* Closing */
+  .closing-slide {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+    text-align: center;
+    color: #fff;
+  }
+
+  .closing-slide h2 {
+    color: #fff;
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .closing-slide p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.15rem;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .contact-link:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.5);
+  }
+
+  /* Navigation */
+  .nav-controls {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 100;
+    background: rgba(255,255,255,0.95);
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--primary);
+    transition: all 0.2s ease;
+  }
+
+  .nav-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
+  .nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  .nav-btn:disabled:hover {
+    background: #fff;
+    color: var(--primary);
+    border-color: var(--border);
+  }
+
+  /* Progress Bar */
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--accent);
+    z-index: 100;
+    transition: width 0.4s ease;
+  }
+
+  /* Section Dots */
+  .section-dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background: var(--primary);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  .slide-counter {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    font-weight: 500;
+    min-width: 50px;
+    text-align: center;
+  }
+
+  /* Fade-in animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .slide.active .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide.active .fade-in:nth-child(2) { transition-delay: 0.1s; }
+  .slide.active .fade-in:nth-child(3) { transition-delay: 0.2s; }
+  .slide.active .fade-in:nth-child(4) { transition-delay: 0.3s; }
+  .slide.active .fade-in:nth-child(5) { transition-delay: 0.4s; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .slide { padding: 40px 20px; }
+    h1 { font-size: 2.4rem; }
+    .cover-slide h1 { font-size: 2.8rem; }
+    h2 { font-size: 1.8rem; }
+    .card-grid { grid-template-columns: 1fr; }
+    .fit-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-links { flex-direction: column; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="deck-container">
+
+  <!-- COVER -->
+  <div class="slide cover-slide active" data-slide="0">
+    <div class="slide-inner fade-in">
+      <h1>Dr. Shika Mahdavi</h1>
+      <div class="cover-accent-line"></div>
+      <div class="cover-headline">Senior Learning & Knowledge Measurement Leader</div>
+      <p class="cover-tagline">
+        15+ years building enterprise learning ecosystems, measurement frameworks, and knowledge platforms that connect training investments directly to business performance in regulated financial services.
+      </p>
+      <div class="cover-target">Prepared for Capital One</div>
+    </div>
+  </div>
+
+  <!-- EXECUTIVE PROFILE -->
+  <div class="slide" data-slide="1">
+    <div class="slide-inner">
+      <span class="section-label fade-in">Executive Profile</span>
+      <h2 class="fade-in">Who I Am</h2>
+      <div class="story-block fade-in">
+        <p>
+          I am an enterprise learning leader with 15+ years of experience designing, measuring, and scaling training and knowledge management systems across large financial services organizations. Most recently, I served as Director of Training & Knowledge Management at Charles Schwab, where I led enterprise-wide programs supporting tens of thousands of associates across card servicing, wealth management, and retail banking operations.
+        </p>
+        <p>
+          My work sits at the intersection of learning strategy, measurement rigor, and technology: building the systems that prove training works, then using that proof to drive smarter investments. I hold a Ph.D. in Education Administration, Law & Policy from Texas A&M and currently teach as an Associate Professor at Gracelyn University.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT I BRING -->
+  <div class="slide" data-slide="2">
+    <div class="slide-inner">
+      <span class="section-label fade-in">Core Strengths</span>
+      <h2 class="fade-in">What I Bring</h2>
+      <div class="card-grid fade-in">
+        <div class="card">
+          <div class="card-icon">&#9879;</div>
+          <h3>Learning Measurement Strategy</h3>
+          <p>Built end-to-end evaluation frameworks that connect learning interventions to business KPIs like NPS, resolution rate, and handle time across enterprise populations.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#9881;</div>
+          <h3>Learning Technology Roadmaps</h3>
+          <p>Owned technology strategy for learning platforms, knowledge management systems, and AI-driven coaching tools. Evaluated, selected, and implemented tools at scale.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#9733;</div>
+          <h3>Knowledge Management</h3>
+          <p>Designed and governed enterprise knowledge ecosystems that reduced support escalations and improved speed to proficiency for frontline associates.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#9670;</div>
+          <h3>Cross-Functional Partnership</h3>
+          <p>Partnered with operations, strategy, workforce management, product, and technology teams to align learning investments with business growth objectives.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#10003;</div>
+          <h3>Data-Driven Reporting</h3>
+          <p>Built reporting ecosystems that give senior leadership real-time visibility into knowledge gaps, training ROI, and agent readiness at scale.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">&#9734;</div>
+          <h3>Talent Development</h3>
+          <p>Coached and developed high-performing L&D teams. Raised collective capability by investing in people, not just programs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUSINESS IMPACT -->
+  <div class="slide" data-slide="3">
+    <div class="slide-inner">
+      <span class="section-label fade-in">By the Numbers</span>
+      <h2 class="fade-in">Business Impact</h2>
+      <div class="stats-grid fade-in">
+        <div class="stat-card">
+          <div class="stat-number" data-target="20" data-suffix="%">0%</div>
+          <div class="stat-label">Increase in training adoption across enterprise programs</div>
+          <div class="stat-accent"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="15" data-suffix="-20%">0</div>
+          <div class="stat-label">Improvement in frontline associate performance</div>
+          <div class="stat-accent"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="1.4" data-suffix="M+" data-decimal="true">0</div>
+          <div class="stat-label">Transactions supported by learning-enabled associates</div>
+          <div class="stat-accent"></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="155" data-suffix="K+">0</div>
+          <div class="stat-label">Enterprise partnerships across business lines</div>
+          <div class="stat-accent"></div>
+        </div>
+      </div>
+      <p class="fade-in" style="text-align:center; margin-top: 2rem; font-size: 0.95rem; color: var(--text-light);">
+        Reduced support escalations. Faster onboarding. Measurably shorter speed to proficiency.
+      </p>
+    </div>
+  </div>
+
+  <!-- LEADERSHIP STORY -->
+  <div class="slide" data-slide="4">
+    <div class="slide-inner">
+      <span class="section-label fade-in">How I Lead</span>
+      <h2 class="fade-in">Leadership Story</h2>
+      <div class="story-block fade-in">
+        <p>
+          I lead by making the invisible visible. In learning organizations, the hardest challenge is rarely the training itself. It is proving that training matters, knowing where the gaps are before they show up in customer experience, and building the measurement infrastructure that turns "we think it works" into "here is exactly how it performs."
+        </p>
+        <p>
+          At Schwab, I led this work across a large, matrixed enterprise. I partnered with operations leaders, workforce management, product teams, and technology partners to align learning investments with the metrics that mattered: resolution rate, handle time, NPS, and associate readiness. I built reporting ecosystems that gave senior leaders real-time visibility, not quarterly summaries.
+        </p>
+        <p>
+          I also believe that technology is only as good as the strategy behind it. I have owned learning technology roadmaps end to end, evaluated AI-driven coaching tools, and implemented knowledge management systems. But I always start with the business question: what do we need associates to know, how do we know they know it, and what changes when they do?
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERTISE -->
+  <div class="slide" data-slide="5">
+    <div class="slide-inner">
+      <span class="section-label fade-in">Signature Areas</span>
+      <h2 class="fade-in">Areas of Expertise</h2>
+      <div class="expertise-grid fade-in">
+        <span class="expertise-tag highlight">Learning Measurement & Evaluation</span>
+        <span class="expertise-tag highlight">Knowledge Management Systems</span>
+        <span class="expertise-tag highlight">Learning Technology Roadmaps</span>
+        <span class="expertise-tag">Enterprise L&D Strategy</span>
+        <span class="expertise-tag">AI-Driven Coaching Tools</span>
+        <span class="expertise-tag">LMS / LXP Platforms</span>
+        <span class="expertise-tag">Training ROI & Analytics</span>
+        <span class="expertise-tag">Content Governance</span>
+        <span class="expertise-tag">Capability Building</span>
+        <span class="expertise-tag">Onboarding & Speed to Proficiency</span>
+        <span class="expertise-tag">Performance Consulting</span>
+        <span class="expertise-tag">Change Enablement</span>
+        <span class="expertise-tag">Curriculum Design</span>
+        <span class="expertise-tag">Stakeholder Engagement</span>
+        <span class="expertise-tag">Leadership Development</span>
+        <span class="expertise-tag">Matrixed Organization Leadership</span>
+      </div>
+      <p class="fade-in" style="margin-top: 1.5rem; font-size: 0.9rem; text-align: center; color: var(--text-light);">
+        Highlighted areas map directly to the Card Shared Services Learning & Knowledge team's priorities.
+      </p>
+    </div>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="slide" data-slide="6">
+    <div class="slide-inner">
+      <span class="section-label fade-in">Selected Work</span>
+      <h2 class="fade-in">Achievements & Case Studies</h2>
+
+      <div class="achievement-card fade-in">
+        <div class="achievement-label challenge">Challenge</div>
+        <p>Enterprise learning programs lacked a unified measurement framework. Leadership had no reliable way to connect training investments to business outcomes like NPS or handle time.</p>
+        <div class="achievement-label action" style="margin-top: 14px;">Action</div>
+        <p>Designed and implemented a comprehensive evaluation model tying learning interventions to operational KPIs. Built real-time dashboards for senior leadership and partnered with workforce management to calibrate training timing and intensity.</p>
+        <div class="achievement-label result" style="margin-top: 14px;">Result</div>
+        <p>~20% increase in program adoption. Frontline performance improved 15-20%. Leadership gained real-time visibility into training ROI for the first time.</p>
+      </div>
+
+      <div class="achievement-card fade-in">
+        <div class="achievement-label challenge">Challenge</div>
+        <p>Knowledge management across the enterprise was fragmented. Associates spent excessive time searching for answers, driving up handle time and escalation rates.</p>
+        <div class="achievement-label action" style="margin-top: 14px;">Action</div>
+        <p>Led the design and rollout of a centralized knowledge management system with structured content governance. Implemented search optimization and usage analytics to identify and close knowledge gaps proactively.</p>
+        <div class="achievement-label result" style="margin-top: 14px;">Result</div>
+        <p>Reduced support escalations. Measurably faster speed to proficiency for new associates. Knowledge consumption data became a leading indicator for training needs.</p>
+      </div>
+
+      <div class="achievement-card fade-in">
+        <div class="achievement-label challenge">Challenge</div>
+        <p>Learning technology stack was aging and disconnected from business strategy. No roadmap existed for next-generation tools.</p>
+        <div class="achievement-label action" style="margin-top: 14px;">Action</div>
+        <p>Owned the end-to-end learning technology roadmap. Evaluated AI-driven coaching platforms, systems training interfaces, and modern LMS/LXP solutions. Partnered with tech and product teams to align investments with operational efficiency goals.</p>
+        <div class="achievement-label result" style="margin-top: 14px;">Result</div>
+        <p>Delivered a multi-year technology roadmap adopted by senior leadership. Positioned the learning function as a strategic partner in digital transformation.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY I FIT THIS ROLE -->
+  <!-- EDITABLE SECTION: Update the content below for each application -->
+  <div class="slide" data-slide="7">
+    <div class="slide-inner">
+      <span class="section-label fade-in">Strategic Fit</span>
+      <!-- Edit: Update heading for different roles -->
+      <h2 class="fade-in">Why Capital One</h2>
+      <div class="fit-grid fade-in">
+        <!-- Edit: TARGET ROLE -->
+        <div class="fit-card">
+          <div class="fit-label">The Role</div>
+          <p>Senior Manager, Learning & Knowledge Measurement & Technology Project Manager. This role asks for someone who can redefine how Capital One quantifies the impact of learning and knowledge, own the technology roadmap, and build a reporting ecosystem that connects training to business outcomes.</p>
+        </div>
+        <!-- Edit: WHY THIS COMPANY -->
+        <div class="fit-card">
+          <div class="fit-label">Why Capital One</div>
+          <p>Capital One is a technology company that happens to be in financial services. That mindset, using data and technology to solve real problems, is exactly how I approach learning. The Card Shared Services team's focus on measurable impact and next-generation learning tools mirrors the work I have been doing for years.</p>
+        </div>
+        <!-- Edit: TOP 3 NEEDS OF THIS ROLE -->
+        <div class="fit-card">
+          <div class="fit-label">What You Need</div>
+          <p>An end-to-end measurement strategy connecting learning to NPS, resolution rate, and handle time. A learning technology roadmap including AI coaching and KM systems. A reporting ecosystem that gives leadership real-time visibility. I have built all three in a comparable enterprise financial services environment.</p>
+        </div>
+        <!-- Edit: MOST RELEVANT ACHIEVEMENT -->
+        <div class="fit-card">
+          <div class="fit-label">My Closest Proof Point</div>
+          <p>At Schwab, I led the same scope of work this role describes: measurement strategy, technology roadmap, knowledge management, cross-functional partnership, and senior stakeholder reporting. The difference was that I built it; here, I would bring a proven playbook and evolve it further.</p>
+        </div>
+        <!-- Edit: KEY BUSINESS CHALLENGE -->
+        <div class="fit-card fit-full">
+          <div class="fit-label">The Challenge I Am Ready For</div>
+          <p>Transforming the learning and knowledge experience for Card Shared Services is not just a measurement project or a technology project. It requires someone who understands how these pieces connect: how measurement informs technology decisions, how knowledge management data feeds training strategy, and how all of it rolls up to the business metrics leadership cares about. That integrated view is what I bring.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOLS & PLATFORMS -->
+  <div class="slide" data-slide="8">
+    <div class="slide-inner">
+      <span class="section-label fade-in">Tools & Platforms</span>
+      <h2 class="fade-in">Technology & Methods</h2>
+      <div class="tools-grid fade-in">
+        <div class="tool-group">
+          <h4>Learning Platforms</h4>
+          <ul>
+            <li>LMS / LXP Systems</li>
+            <li>Moodle</li>
+            <li>E-Learning Authoring Tools</li>
+            <li>SCORM / xAPI</li>
+          </ul>
+        </div>
+        <div class="tool-group">
+          <h4>Knowledge Management</h4>
+          <ul>
+            <li>KM Platforms</li>
+            <li>Content Governance Frameworks</li>
+            <li>Search Optimization</li>
+            <li>Knowledge Analytics</li>
+          </ul>
+        </div>
+        <div class="tool-group">
+          <h4>Measurement & Analytics</h4>
+          <ul>
+            <li>Evaluation Frameworks</li>
+            <li>Training ROI Models</li>
+            <li>Real-Time Dashboards</li>
+            <li>Needs Assessment</li>
+          </ul>
+        </div>
+        <div class="tool-group">
+          <h4>AI & Emerging Tech</h4>
+          <ul>
+            <li>AI-Driven Coaching</li>
+            <li>Systems Training Interfaces</li>
+            <li>Generative AI in Learning</li>
+            <li>Intelligent Search</li>
+          </ul>
+        </div>
+        <div class="tool-group">
+          <h4>Collaboration</h4>
+          <ul>
+            <li>Google Workspace</li>
+            <li>CRM Systems</li>
+            <li>SaaS Platforms</li>
+            <li>Productivity Tools</li>
+          </ul>
+        </div>
+        <div class="tool-group">
+          <h4>Methods</h4>
+          <ul>
+            <li>Kirkpatrick Model</li>
+            <li>ADDIE / SAM</li>
+            <li>Agile Project Management</li>
+            <li>Stakeholder Engagement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEADERSHIP PHILOSOPHY -->
+  <div class="slide" data-slide="9">
+    <div class="slide-inner">
+      <span class="section-label fade-in">Philosophy</span>
+      <h2 class="fade-in">How I Think About This Work</h2>
+      <div class="philosophy-block fade-in">
+        <p>
+          Learning organizations earn their seat at the table when they can answer the question every executive is asking: "Is this working, and how do you know?" My work is about building the infrastructure, the measurement systems, the technology, and the team capability, that makes that answer clear, credible, and actionable. The goal is not more training. The goal is better outcomes, proven.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="slide closing-slide" data-slide="10">
+    <div class="slide-inner fade-in">
+      <h2>Let's Build Something Measurable</h2>
+      <div class="cover-accent-line"></div>
+      <p style="max-width: 650px; margin: 0 auto 0.5rem; font-size: 1.15rem;">
+        I would welcome the opportunity to discuss how my experience in learning measurement, technology strategy, and knowledge management aligns with what Capital One is building.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:shika.mahdavi@gmail.com" class="contact-link">
+          &#9993; shika.mahdavi@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/shika-lanae-hershel-ed-d" target="_blank" class="contact-link">
+          &#128279; LinkedIn
+        </a>
+        <a href="https://shikamahdavi.com/" target="_blank" class="contact-link">
+          &#127760; shikamahdavi.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Navigation Controls -->
+<div class="nav-controls">
+  <button class="nav-btn" id="prevBtn" onclick="navigate(-1)" disabled>&#8592;</button>
+  <div class="section-dots" id="sectionDots"></div>
+  <span class="slide-counter" id="slideCounter">1 / 11</span>
+  <button class="nav-btn" id="nextBtn" onclick="navigate(1)">&#8594;</button>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+(function() {
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+  let currentSlide = 0;
+  let isTransitioning = false;
+
+  const progressBar = document.getElementById('progressBar');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const slideCounter = document.getElementById('slideCounter');
+  const dotsContainer = document.getElementById('sectionDots');
+
+  // Create dots
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  }
+
+  function updateUI() {
+    // Progress bar
+    progressBar.style.width = ((currentSlide + 1) / totalSlides * 100) + '%';
+
+    // Counter
+    slideCounter.textContent = (currentSlide + 1) + ' / ' + totalSlides;
+
+    // Buttons
+    prevBtn.disabled = currentSlide === 0;
+    nextBtn.disabled = currentSlide === totalSlides - 1;
+
+    // Dots
+    document.querySelectorAll('.dot').forEach((dot, i) => {
+      dot.className = 'dot' + (i === currentSlide ? ' active' : '');
+    });
+  }
+
+  function goToSlide(index) {
+    if (isTransitioning || index === currentSlide) return;
+    isTransitioning = true;
+
+    slides[currentSlide].classList.remove('active');
+    currentSlide = index;
+    slides[currentSlide].classList.add('active');
+
+    // Reset scroll position for new slide
+    slides[currentSlide].scrollTop = 0;
+
+    updateUI();
+    animateCounters();
+
+    setTimeout(() => { isTransitioning = false; }, 600);
+  }
+
+  window.navigate = function(direction) {
+    const newIndex = currentSlide + direction;
+    if (newIndex >= 0 && newIndex < totalSlides) {
+      goToSlide(newIndex);
+    }
+  };
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      navigate(1);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      navigate(-1);
+    }
+  });
+
+  // Animated counters
+  function animateCounters() {
+    const activeSlide = slides[currentSlide];
+    const counters = activeSlide.querySelectorAll('.stat-number[data-target]');
+
+    counters.forEach(counter => {
+      const target = parseFloat(counter.dataset.target);
+      const suffix = counter.dataset.suffix || '';
+      const isDecimal = counter.dataset.decimal === 'true';
+      const duration = 1500;
+      const start = performance.now();
+
+      function update(timestamp) {
+        const elapsed = timestamp - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = eased * target;
+
+        if (isDecimal) {
+          counter.textContent = current.toFixed(1) + suffix;
+        } else {
+          counter.textContent = Math.floor(current) + suffix;
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+
+      requestAnimationFrame(update);
+    });
+  }
+
+  // Apply brand colors from BRAND object
+  if (window.BRAND) {
+    const root = document.documentElement;
+    if (BRAND.primaryColor) root.style.setProperty('--primary', BRAND.primaryColor);
+    if (BRAND.secondaryColor) root.style.setProperty('--secondary', BRAND.secondaryColor);
+    if (BRAND.accentColor) root.style.setProperty('--accent', BRAND.accentColor);
+    if (BRAND.backgroundColor) root.style.setProperty('--bg', BRAND.backgroundColor);
+    if (BRAND.primaryColor) root.style.setProperty('--gradient-start', BRAND.primaryColor);
+    if (BRAND.secondaryColor) root.style.setProperty('--gradient-end', BRAND.secondaryColor);
+  }
+
+  // Initial state
+  updateUI();
+})();
+</script>
+
+</body>
+</html>
